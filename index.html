@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagative Positive</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+        input{
+            padding: 0.7rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<input type="number" name="number" id="input-number" placeholder="Enter Your Number">
+<input type="button" value="Submit" onclick="numberNP()">
+
+
+<body>
+    
+
+
+
+    <script>
+        
+        function numberNP(){
+
+            let inputNumber = document.querySelector("#input-number").value;
+            let number;
+                number = inputNumber>0? "+Positive":
+                number = inputNumber<0? "-Negative": "Zero";
+
+            document.querySelector('h4').innerHTML=(`Your Number: ${inputNumber}`);
+            document.querySelector('h2').innerHTML=(`Your Number Type: ${number}`);
+
+            inputTextnone()
+        }
+
+        function inputTextnone(){
+            document.querySelector('#input-number').value="";
+        }
+        
+    </script>
+</body>
+</html>
